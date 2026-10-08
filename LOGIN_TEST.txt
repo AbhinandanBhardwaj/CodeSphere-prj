@@ -1,0 +1,6 @@
+CodeSphere frontend demo login
+
+Username: demo1
+Password: Demo@123
+
+The login page also accepts registered usernames or emails.

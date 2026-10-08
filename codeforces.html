@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | Codeforces</title>
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/codeforces.css"
+    >
+
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+
+<body>
+
+<div class="codeforces-app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar" aria-label="CodeSphere navigation">
+    <!-- Shared navigation is rendered by js/sidebar.js -->
+</aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="codeforces-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-title">
+
+                <span class="topbar-label">
+                    CODESPHERE
+                </span>
+
+                <span class="topbar-divider">
+                    /
+                </span>
+
+                <span>
+                    Codeforces
+                </span>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <a
+                    href="profile.html"
+                    class="topbar-profile"
+                >
+
+                    <div class="profile-avatar">
+                        C
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span
+                            id="codeforcesDashboardUsername"
+                            class="profile-name"
+                        >
+                            Developer
+                        </span>
+
+                        <span class="profile-role">
+                            Coder
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="codeforces-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="codeforces-page-header">
+
+                <div>
+
+                    <p class="codeforces-label">
+                        EXTERNAL PLATFORM
+                    </p>
+
+                    <h1>
+                        Codeforces Progress
+                    </h1>
+
+                    <p>
+                        Connect your public Codeforces profile
+                        and view your coding progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONNECT CARD
+                 ================================================= -->
+
+            <section class="codeforces-card connect-card">
+
+
+                <div class="codeforces-card-header">
+
+                    <div>
+
+                        <p class="card-label">
+                            CONNECT ACCOUNT
+                        </p>
+
+                        <h2>
+                            Connect your Codeforces profile
+                        </h2>
+
+                    </div>
+
+
+                    <div class="codeforces-logo">
+                        CF
+                    </div>
+
+                </div>
+
+
+                <p class="connect-description">
+
+                    Enter your Codeforces handle to fetch
+                    your public profile information.
+
+                </p>
+
+
+                <div class="handle-form">
+
+                    <input
+                        type="text"
+                        id="codeforcesHandle"
+                        placeholder="Enter Codeforces handle"
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="connectCodeforcesButton"
+                    >
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="codeforcesMessage"
+                    class="codeforces-message"
+                ></div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE CARD
+                 ================================================= -->
+
+            <section
+                id="codeforcesProfileCard"
+                class="codeforces-card profile-card hidden"
+            >
+
+
+                <div class="codeforces-profile-header">
+
+
+                    <div class="codeforces-profile-avatar">
+                        CF
+                    </div>
+
+
+                    <div>
+
+                        <p class="card-label">
+                            CODEFORCES PROFILE
+                        </p>
+
+                        <h2
+                            id="connectedCodeforcesHandle"
+                        >
+                            -
+                        </h2>
+
+                        <p
+                            id="codeforcesStatus"
+                            class="profile-status"
+                        >
+                            Connected
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STATISTICS
+                     ================================================= -->
+
+                <div class="codeforces-stats-grid">
+
+
+                    <!-- RATING -->
+
+                    <div class="codeforces-stat">
+
+                        <span class="codeforces-stat-label">
+                            RATING
+                        </span>
+
+                        <strong
+                            id="codeforcesRating"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <!-- RANK -->
+
+                    <div class="codeforces-stat">
+
+                        <span class="codeforces-stat-label">
+                            RANK
+                        </span>
+
+                        <strong
+                            id="codeforcesRank"
+                        >
+                            Unrated
+                        </strong>
+
+                    </div>
+
+
+                    <!-- MAX RATING -->
+
+                    <div class="codeforces-stat">
+
+                        <span class="codeforces-stat-label">
+                            MAX RATING
+                        </span>
+
+                        <strong
+                            id="codeforcesMaxRating"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <!-- ACCEPTED -->
+
+                    <div class="codeforces-stat">
+
+                        <span class="codeforces-stat-label">
+                            ACCEPTED
+                        </span>
+
+                        <strong
+                            id="codeforcesAccepted"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PROFILE FOOTER -->
+
+                <div class="codeforces-profile-footer">
+
+
+                    <a
+                        id="codeforcesProfileLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Codeforces Profile →
+                    </a>
+
+
+                    <button
+                        type="button"
+                        id="disconnectCodeforcesButton"
+                        class="disconnect-button"
+                    >
+                        Disconnect
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMATION
+                 ================================================= -->
+
+            <section class="codeforces-card information-card">
+
+
+                <div class="info-icon">
+                    ℹ
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        About this integration
+                    </h3>
+
+                    <p>
+
+                        CodeSphere uses Codeforces' public API.
+                        No Codeforces password or login
+                        information is required.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<script src="js/codeforces.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

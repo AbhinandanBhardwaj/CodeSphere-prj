@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | Authentication</title>
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         BACKGROUND
+         ================================ -->
+
+    <div class="page-background"></div>
+
+
+
+    <!-- ================================
+         AUTH PAGE
+         ================================ -->
+
+    <main class="auth-page">
+
+
+        <!-- ============================
+             BRAND
+             ============================ -->
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                &lt;/&gt;
+            </div>
+
+
+            <div>
+
+                <div class="brand-name">
+                    CodeSphere
+                </div>
+
+                <div class="brand-subtitle">
+                    Coding Performance Platform
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ============================
+             AUTH CARD
+             ============================ -->
+
+        <div class="auth-card">
+
+
+            <!-- =================================
+                 LOGIN SECTION
+                 ================================= -->
+
+            <section
+                id="loginSection"
+                class="auth-section"
+            >
+
+
+                <!-- HEADER -->
+
+                <div class="auth-header">
+
+                    <h1>
+                        Welcome Back
+                    </h1>
+
+                    <p>
+                        Sign in to continue your coding journey.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="loginForm">
+
+
+                    <!-- USERNAME -->
+
+                    <div class="form-group">
+
+                        <label for="loginUsername">
+                            Username
+                        </label>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                @
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="loginUsername"
+                                placeholder="Enter your username"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field-error"></div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                        </div>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                •
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="loginPasswordToggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+
+                        <div class="field-error"></div>
+
+                    </div>
+
+
+
+                    <!-- ERROR -->
+
+                    <div
+                        id="loginError"
+                        class="form-error"
+                    ></div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Login
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- SWITCH -->
+
+                <div class="switch-auth">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="link-button"
+                        id="showSignup"
+                    >
+                        Sign up
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- =================================
+                 SIGNUP SECTION
+                 ================================= -->
+
+            <section
+                id="signupSection"
+                class="auth-section hidden"
+            >
+
+
+                <!-- HEADER -->
+
+                <div class="auth-header">
+
+                    <h1>
+                        Create Account
+                    </h1>
+
+                    <p>
+                        Start tracking your coding journey with CodeSphere.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="signupForm">
+
+
+                    <!-- USERNAME -->
+
+                    <div class="form-group">
+
+                        <label for="signupUsername">
+                            Username
+                        </label>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                @
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="signupUsername"
+                                placeholder="Choose a username"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div
+                            id="usernameError"
+                            class="field-error"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">
+                            Email
+                        </label>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                @
+                            </span>
+
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div
+                            id="emailError"
+                            class="field-error"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                •
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="signupPasswordToggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="passwordError"
+                            class="field-error"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD REQUIREMENTS -->
+
+                    <div class="password-requirements">
+
+                        <div class="requirements-title">
+                            PASSWORD REQUIREMENTS
+                        </div>
+
+
+                        <div class="requirements-grid">
+
+                            <span id="reqLength">
+                                ✓ At least 6 characters
+                            </span>
+
+
+                            <span id="reqLetter">
+                                ✓ Contains a letter
+                            </span>
+
+
+                            <span id="reqNumber">
+                                ✓ Contains a number
+                            </span>
+
+
+                            <span id="reqSpecial">
+                                ✓ Contains a special character
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="signupConfirmPassword">
+                            Confirm Password
+                        </label>
+
+
+                        <div class="input-container">
+
+                            <span class="input-symbol">
+                                •
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="signupConfirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="confirmPasswordToggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="confirmPasswordError"
+                            class="field-error"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- ERROR -->
+
+                    <div
+                        id="signupError"
+                        class="form-error"
+                    ></div>
+
+
+
+                    <!-- SUCCESS -->
+
+                    <div
+                        id="signupSuccess"
+                        class="form-success"
+                    ></div>
+
+
+
+                    <!-- SIGNUP BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Create Account
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- SWITCH -->
+
+                <div class="switch-auth">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="link-button"
+                        id="showLogin"
+                    >
+                        Login
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <div class="auth-footer">
+
+            <span>
+                CodeSphere • Your coding journey, unified
+            </span>
+
+        </div>
+
+
+    </main>
+
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           ELEMENTS
+           ========================================= */
+
+        const loginSection =
+            document.getElementById("loginSection");
+
+        const signupSection =
+            document.getElementById("signupSection");
+
+
+        const showSignup =
+            document.getElementById("showSignup");
+
+        const showLogin =
+            document.getElementById("showLogin");
+
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        const signupForm =
+            document.getElementById("signupForm");
+
+
+
+        /* =========================================
+           SWITCH TO SIGNUP
+           ========================================= */
+
+        showSignup.addEventListener(
+            "click",
+            function () {
+
+                loginSection.classList.add("hidden");
+
+                signupSection.classList.remove("hidden");
+
+                clearMessages();
+
+            }
+        );
+
+
+
+        /* =========================================
+           SWITCH TO LOGIN
+           ========================================= */
+
+        showLogin.addEventListener(
+            "click",
+            function () {
+
+                signupSection.classList.add("hidden");
+
+                loginSection.classList.remove("hidden");
+
+                clearMessages();
+
+            }
+        );
+
+
+
+        /* =========================================
+           CLEAR MESSAGES
+           ========================================= */
+
+        function clearMessages() {
+
+            document.getElementById(
+                "loginError"
+            ).textContent = "";
+
+
+            document.getElementById(
+                "loginError"
+            ).classList.remove("show");
+
+
+            document.getElementById(
+                "signupError"
+            ).textContent = "";
+
+
+            document.getElementById(
+                "signupError"
+            ).classList.remove("show");
+
+
+            document.getElementById(
+                "signupSuccess"
+            ).textContent = "";
+
+
+            document.getElementById(
+                "signupSuccess"
+            ).classList.remove("show");
+
+
+            document.querySelectorAll(
+                ".field-error"
+            ).forEach(
+                element => {
+                    element.textContent = "";
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           PASSWORD TOGGLE
+           ========================================= */
+
+        function setupPasswordToggle(
+            inputId,
+            buttonId
+        ) {
+
+            const input =
+                document.getElementById(inputId);
+
+            const button =
+                document.getElementById(buttonId);
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        input.type === "password"
+                    ) {
+
+                        input.type = "text";
+
+                        button.textContent =
+                            "Hide";
+
+                    } else {
+
+                        input.type = "password";
+
+                        button.textContent =
+                            "Show";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        setupPasswordToggle(
+            "loginPassword",
+            "loginPasswordToggle"
+        );
+
+
+        setupPasswordToggle(
+            "signupPassword",
+            "signupPasswordToggle"
+        );
+
+
+        setupPasswordToggle(
+            "signupConfirmPassword",
+            "confirmPasswordToggle"
+        );
+
+
+
+        /* =========================================
+           GET USERS
+           ========================================= */
+
+        function getUsers() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem(
+                        "codesphereUsers"
+                    )
+                ) || [];
+
+            } catch (error) {
+
+                return [];
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           LOGIN
+           ========================================= */
+
+        loginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const username =
+                    document
+                        .getElementById("loginUsername")
+                        .value
+                        .trim();
+
+
+                const password =
+                    document
+                        .getElementById("loginPassword")
+                        .value;
+
+
+                const errorBox =
+                    document.getElementById(
+                        "loginError"
+                    );
+
+
+                errorBox.textContent = "";
+
+
+                errorBox.classList.remove(
+                    "show"
+                );
+
+
+                if (!username || !password) {
+
+                    errorBox.textContent =
+                        "Please enter your username and password.";
+
+                    errorBox.classList.add(
+                        "show"
+                    );
+
+                    return;
+
+                }
+
+
+                const users =
+                    getUsers();
+
+
+                const user =
+                    users.find(
+                        item =>
+                            item.username.toLowerCase() ===
+                            username.toLowerCase() &&
+                            item.password === password
+                    );
+
+
+                if (!user) {
+
+                    errorBox.textContent =
+                        "Invalid username or password.";
+
+                    errorBox.classList.add(
+                        "show"
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* =================================
+                   SAVE LOGGED-IN USER
+                   ================================= */
+
+                localStorage.setItem(
+                    "codesphereCurrentUser",
+                    JSON.stringify({
+
+                        username:
+                            user.username,
+
+                        email:
+                            user.email
+
+                    })
+                );
+
+
+
+                /* =================================
+                   GO TO DASHBOARD
+                   ================================= */
+
+                window.location.href =
+                    "dashboard.html";
+
+            }
+        );
+
+
+
+        /* =========================================
+           SIGNUP
+           ========================================= */
+
+        signupForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                clearMessages();
+
+
+                const username =
+                    document
+                        .getElementById("signupUsername")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("signupEmail")
+                        .value
+                        .trim();
+
+
+                const password =
+                    document
+                        .getElementById("signupPassword")
+                        .value;
+
+
+                const confirmPassword =
+                    document
+                        .getElementById(
+                            "signupConfirmPassword"
+                        )
+                        .value;
+
+
+                const usernameError =
+                    document.getElementById(
+                        "usernameError"
+                    );
+
+
+                const emailError =
+                    document.getElementById(
+                        "emailError"
+                    );
+
+
+                const passwordError =
+                    document.getElementById(
+                        "passwordError"
+                    );
+
+
+                const confirmPasswordError =
+                    document.getElementById(
+                        "confirmPasswordError"
+                    );
+
+
+                const errorBox =
+                    document.getElementById(
+                        "signupError"
+                    );
+
+
+
+                /* =================================
+                   VALIDATION
+                   ================================= */
+
+                let hasError = false;
+
+
+
+                if (username.length < 3) {
+
+                    usernameError.textContent =
+                        "Username must contain at least 3 characters.";
+
+                    hasError = true;
+
+                }
+
+
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (!emailPattern.test(email)) {
+
+                    emailError.textContent =
+                        "Please enter a valid email address.";
+
+                    hasError = true;
+
+                }
+
+
+
+                if (password.length < 6) {
+
+                    passwordError.textContent =
+                        "Password must contain at least 6 characters.";
+
+                    hasError = true;
+
+                }
+
+
+
+                if (password !== confirmPassword) {
+
+                    confirmPasswordError.textContent =
+                        "Passwords do not match.";
+
+                    hasError = true;
+
+                }
+
+
+
+                if (hasError) {
+
+                    return;
+
+                }
+
+
+
+                /* =================================
+                   GET EXISTING USERS
+                   ================================= */
+
+                const users =
+                    getUsers();
+
+
+
+                /* =================================
+                   CHECK USERNAME
+                   ================================= */
+
+                const usernameExists =
+                    users.some(
+                        user =>
+                            user.username.toLowerCase() ===
+                            username.toLowerCase()
+                    );
+
+
+                if (usernameExists) {
+
+                    usernameError.textContent =
+                        "This username is already taken.";
+
+                    return;
+
+                }
+
+
+
+                /* =================================
+                   CHECK EMAIL
+                   ================================= */
+
+                const emailExists =
+                    users.some(
+                        user =>
+                            user.email.toLowerCase() ===
+                            email.toLowerCase()
+                    );
+
+
+                if (emailExists) {
+
+                    emailError.textContent =
+                        "An account with this email already exists.";
+
+                    return;
+
+                }
+
+
+
+                /* =================================
+                   CREATE USER
+                   ================================= */
+
+                const newUser = {
+
+                    username:
+                        username,
+
+                    email:
+                        email,
+
+                    password:
+                        password,
+
+                    solvedCount:
+                        0,
+
+                    createdAt:
+                        new Date().toISOString()
+
+                };
+
+
+                users.push(newUser);
+
+
+
+                /* =================================
+                   SAVE USERS
+                   ================================= */
+
+                localStorage.setItem(
+                    "codesphereUsers",
+                    JSON.stringify(users)
+                );
+
+
+
+                /* =================================
+                   SAVE CURRENT USER
+                   ================================= */
+
+                localStorage.setItem(
+                    "codesphereCurrentUser",
+                    JSON.stringify({
+
+                        username:
+                            username,
+
+                        email:
+                            email
+
+                    })
+                );
+
+
+
+                /* =================================
+                   GO TO DASHBOARD
+                   ================================= */
+
+                window.location.href =
+                    "dashboard.html";
+
+            }
+        );
+
+
+
+        /* =========================================
+           PASSWORD REQUIREMENTS
+           ========================================= */
+
+        const signupPassword =
+            document.getElementById(
+                "signupPassword"
+            );
+
+
+        signupPassword.addEventListener(
+            "input",
+            function () {
+
+                const password =
+                    signupPassword.value;
+
+
+                const length =
+                    document.getElementById(
+                        "reqLength"
+                    );
+
+
+                const letter =
+                    document.getElementById(
+                        "reqLetter"
+                    );
+
+
+                const number =
+                    document.getElementById(
+                        "reqNumber"
+                    );
+
+
+                const special =
+                    document.getElementById(
+                        "reqSpecial"
+                    );
+
+
+                length.classList.toggle(
+                    "valid",
+                    password.length >= 6
+                );
+
+
+                letter.classList.toggle(
+                    "valid",
+                    /[A-Za-z]/.test(password)
+                );
+
+
+                number.classList.toggle(
+                    "valid",
+                    /[0-9]/.test(password)
+                );
+
+
+                special.classList.toggle(
+                    "valid",
+                    /[^A-Za-z0-9]/.test(password)
+                );
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

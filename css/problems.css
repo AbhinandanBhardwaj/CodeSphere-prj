@@ -1,0 +1,589 @@
+/* =====================================================
+   CodeSphere Problems Page
+   ===================================================== */
+
+
+.problems-page {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.problems-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.problems-header h1 {
+    margin: 0.25rem 0;
+    font-size: 2.2rem;
+    color: var(--text-primary);
+}
+
+
+.problems-subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+
+.problem-stats {
+    display: flex;
+    gap: 0.75rem;
+}
+
+
+.problem-stat {
+    min-width: 100px;
+    padding: 0.85rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+}
+
+
+.problem-stat span {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+.problem-stat strong {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+
+
+/* =====================================================
+   FILTER CARD
+   ===================================================== */
+
+.problem-filter-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+.problem-search {
+    flex: 1;
+    min-width: 220px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-sm);
+
+    padding: 0.65rem 0.8rem;
+}
+
+
+.problem-search span {
+    color: var(--text-dim);
+    font-size: 1rem;
+}
+
+
+.problem-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+
+.problem-search input::placeholder {
+    color: var(--text-dim);
+}
+
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+
+.filter-label {
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.filter-buttons {
+    display: flex;
+    gap: 0.35rem;
+}
+
+
+.filter-button,
+.status-button {
+    border: 1px solid var(--border-card);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+
+    padding: 0.45rem 0.75rem;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.filter-button:hover,
+.status-button:hover {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+
+.filter-button.active,
+.status-button.active {
+    background: var(--neon-green);
+    border-color: var(--neon-green);
+    color: #07120b;
+}
+
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.problem-table-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+
+.problem-table-header {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 130px 130px 130px;
+
+    padding: 0.9rem 1.2rem;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border-bottom: 1px solid var(--border-card);
+
+    color: var(--text-dim);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+.problem-row {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 130px 130px 130px;
+
+    align-items: center;
+
+    padding: 1rem 1.2rem;
+
+    border-bottom: 1px solid var(--border-card);
+
+    transition: background 0.2s;
+}
+
+
+.problem-row:last-child {
+    border-bottom: none;
+}
+
+
+.problem-row:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* =====================================================
+   PROBLEM NAME
+   ===================================================== */
+
+.problem-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+
+.problem-number {
+    width: 28px;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+}
+
+
+.problem-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+
+
+.problem-platform {
+    margin-top: 0.25rem;
+    color: var(--text-dim);
+    font-size: 0.68rem;
+}
+
+
+
+/* =====================================================
+   DIFFICULTY
+   ===================================================== */
+
+.problem-difficulty {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+.problem-difficulty.easy {
+    color: var(--neon-green);
+}
+
+
+.problem-difficulty.medium {
+    color: var(--neon-yellow);
+}
+
+
+.problem-difficulty.hard {
+    color: var(--neon-red);
+}
+
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.problem-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+.problem-status.solved {
+    color: var(--neon-green);
+}
+
+
+.problem-status.unsolved {
+    color: var(--text-dim);
+}
+
+
+.status-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+
+.status-circle.solved {
+    background: var(--neon-green);
+}
+
+
+.status-circle.unsolved {
+    border: 1px solid var(--text-dim);
+}
+
+
+
+/* =====================================================
+   SOLVE BUTTON
+   ===================================================== */
+
+.solve-button {
+    width: fit-content;
+
+    border: 1px solid var(--border-card);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--text-secondary);
+
+    padding: 0.45rem 0.75rem;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+
+.solve-button:hover {
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+}
+
+
+.solve-button.solved {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.35);
+    color: var(--neon-green);
+}
+
+
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.empty-problems {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+
+.empty-icon {
+    font-size: 2rem;
+    color: var(--text-dim);
+}
+
+
+.empty-problems h3 {
+    margin: 0.75rem 0 0.3rem;
+    color: var(--text-primary);
+}
+
+
+.empty-problems p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .problem-table-header {
+        grid-template-columns: 1fr 100px 100px;
+    }
+
+
+    .problem-row {
+        grid-template-columns: 1fr 100px 100px;
+    }
+
+
+    .problem-table-header div:nth-child(3),
+    .problem-row > div:nth-child(3) {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .problems-page {
+        padding: 1rem;
+    }
+
+
+    .problems-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .problem-filter-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .problem-search {
+        width: 100%;
+    }
+
+
+    .problem-table-header {
+        display: none;
+    }
+
+
+    .problem-row {
+        grid-template-columns: 1fr auto;
+        gap: 0.75rem;
+    }
+
+
+    .problem-row > div:nth-child(2),
+    .problem-row > div:nth-child(3) {
+        display: none;
+    }
+
+}
+
+/* =========================================================
+   CodeSphere Problems — Unified Yellow/Gold Theme
+   Matches Dashboard / shared CodeSphere navigation
+   ========================================================= */
+
+:root {
+    --problem-accent: #ffd21f;
+    --problem-accent-strong: #ffcc00;
+    --problem-accent-soft: rgba(255, 210, 31, 0.12);
+    --problem-accent-border: rgba(255, 210, 31, 0.28);
+}
+
+/* Active Problems navigation */
+.sidebar .nav-item.active,
+.sidebar .nav-link.active,
+.sidebar a.active {
+    background: rgba(255, 210, 31, 0.11) !important;
+    color: var(--problem-accent) !important;
+    border-left-color: var(--problem-accent) !important;
+}
+
+/* Problems page title / section labels */
+.problems-main .section-label,
+.problems-main .eyebrow,
+.problems-main .page-kicker,
+.problems-main .accent-text {
+    color: var(--problem-accent) !important;
+}
+
+/* Search/filter panel */
+.problems-main .search-box:focus-within,
+.problems-main .filter-group:focus-within {
+    border-color: var(--problem-accent-border) !important;
+    box-shadow: 0 0 0 1px var(--problem-accent-soft) !important;
+}
+
+/* Selected filter buttons */
+.problems-main .filter-btn.active,
+.problems-main .difficulty-btn.active,
+.problems-main .status-btn.active,
+.problems-main button.active {
+    background: var(--problem-accent) !important;
+    color: #08090b !important;
+    border-color: var(--problem-accent) !important;
+}
+
+/* Problem table header and borders */
+.problems-main .problem-table th {
+    color: #8b9bb0;
+}
+
+.problems-main .problem-row:hover,
+.problems-main tbody tr:hover {
+    background: rgba(255, 210, 31, 0.035) !important;
+}
+
+/* Solved status */
+.problems-main .status-solved,
+.problems-main .solved,
+.problems-main .status.completed {
+    color: var(--problem-accent) !important;
+}
+
+/* Keep difficulty colors meaningful, but remove the green platform-page feel */
+.problems-main .difficulty.easy {
+    color: var(--problem-accent) !important;
+}
+
+.problems-main .difficulty.medium {
+    color: #ffb84d !important;
+}
+
+.problems-main .difficulty.hard {
+    color: #ff6b6b !important;
+}
+
+/* Primary problem actions */
+.problems-main .primary-btn,
+.problems-main .solve-btn,
+.problems-main .mark-solved,
+.problems-main button.primary {
+    background: var(--problem-accent) !important;
+    color: #08090b !important;
+    border-color: var(--problem-accent) !important;
+}
+
+.problems-main .primary-btn:hover,
+.problems-main .solve-btn:hover,
+.problems-main .mark-solved:hover,
+.problems-main button.primary:hover {
+    background: var(--problem-accent-strong) !important;
+}
+
+/* Stats cards */
+.problems-main .stat-card strong,
+.problems-main .stat-value {
+    color: #f4f6f8 !important;
+}
+
+.problems-main .stat-card .accent,
+.problems-main .stat-card .value-accent {
+    color: var(--problem-accent) !important;
+}
+
+/* Pagination / selected controls */
+.problems-main .pagination .active,
+.problems-main .page-btn.active {
+    background: var(--problem-accent) !important;
+    color: #08090b !important;
+    border-color: var(--problem-accent) !important;
+}

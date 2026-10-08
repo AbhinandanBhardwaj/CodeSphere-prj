@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | Problems</title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/problems.css"
+    >
+
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+
+<body class="problems-page">
+
+
+<div class="dashboard-app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar" aria-label="CodeSphere navigation">
+    <!-- Shared navigation is rendered by js/sidebar.js -->
+</aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="dashboard-main problems-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-title">
+
+                <span class="topbar-label">
+                    CODESPHERE
+                </span>
+
+                <span class="topbar-divider">
+                    /
+                </span>
+
+                <span>
+                    Problems
+                </span>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <a
+                    href="profile.html"
+                    class="topbar-profile"
+                    style="text-decoration: none;"
+                >
+
+                    <div class="profile-avatar">
+                        D
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <span
+                            id="problemsUsername"
+                            class="profile-name"
+                        >
+                            Developer
+                        </span>
+
+                        <span class="profile-role">
+                            Coder
+                        </span>
+
+                    </div>
+
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE
+             ================================================= -->
+
+        <section class="problems-page">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="problems-header">
+
+
+                <div>
+
+                    <p class="card-label">
+                        PRACTICE
+                    </p>
+
+                    <h1>
+                        Problems
+                    </h1>
+
+                    <p class="problems-subtitle">
+                        Solve coding problems and improve your skills.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-stats">
+
+
+                    <div class="problem-stat">
+
+                        <span>
+                            Solved
+                        </span>
+
+                        <strong id="solvedCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="problem-stat">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTERS
+                 ================================================= -->
+
+            <section class="problem-filter-card">
+
+
+                <!-- SEARCH -->
+
+                <div class="problem-search">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search problems..."
+                    >
+
+                </div>
+
+
+
+                <!-- DIFFICULTY -->
+
+                <div class="filter-group">
+
+                    <span class="filter-label">
+                        Difficulty
+                    </span>
+
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="filter-button active"
+                            data-difficulty="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-difficulty="Easy"
+                        >
+                            Easy
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-difficulty="Medium"
+                        >
+                            Medium
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-difficulty="Hard"
+                        >
+                            Hard
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="filter-group">
+
+                    <span class="filter-label">
+                        Status
+                    </span>
+
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="status-button active"
+                            data-status="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="status-button"
+                            data-status="solved"
+                        >
+                            Solved
+                        </button>
+
+                        <button
+                            class="status-button"
+                            data-status="unsolved"
+                        >
+                            Unsolved
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROBLEM TABLE
+                 ================================================= -->
+
+            <section class="problem-table-card">
+
+
+                <div class="problem-table-header">
+
+
+                    <div>
+                        Problem
+                    </div>
+
+                    <div>
+                        Difficulty
+                    </div>
+
+                    <div>
+                        Status
+                    </div>
+
+                    <div>
+                        Action
+                    </div>
+
+
+                </div>
+
+
+                <!-- JS WILL RENDER PROBLEMS HERE -->
+
+                <div
+                    id="problemList"
+                    class="problem-list"
+                >
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    id="emptyProblems"
+                    class="empty-problems"
+                    style="display: none;"
+                >
+
+                    <div class="empty-icon">
+                        ∅
+                    </div>
+
+                    <h3>
+                        No problems found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/problems.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

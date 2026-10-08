@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | LeetCode</title>
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/leetcode.css"
+    >
+
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+
+<body>
+
+<div class="leetcode-app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar" aria-label="CodeSphere navigation">
+    <!-- Shared navigation is rendered by js/sidebar.js -->
+</aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="leetcode-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-title">
+
+                <span class="topbar-label">
+                    CODESPHERE
+                </span>
+
+                <span class="topbar-divider">
+                    /
+                </span>
+
+                <span>
+                    LeetCode
+                </span>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <a
+                    href="profile.html"
+                    class="topbar-profile"
+                    style="text-decoration: none;"
+                >
+
+                    <div class="profile-avatar">
+                        C
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span
+                            id="leetcodeDashboardUsername"
+                            class="profile-name"
+                        >
+                            Developer
+                        </span>
+
+                        <span class="profile-role">
+                            Coder
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="leetcode-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="leetcode-page-header">
+
+                <div>
+
+                    <p class="leetcode-label">
+                        EXTERNAL PLATFORM
+                    </p>
+
+                    <h1>
+                        LeetCode Progress
+                    </h1>
+
+                    <p>
+                        Connect your public LeetCode profile
+                        and view your basic coding progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONNECT CARD
+                 ================================================= -->
+
+            <section class="leetcode-card connect-card">
+
+
+                <div class="leetcode-card-header">
+
+                    <div>
+
+                        <p class="card-label">
+                            CONNECT ACCOUNT
+                        </p>
+
+                        <h2>
+                            Connect your LeetCode profile
+                        </h2>
+
+                    </div>
+
+                    <div class="leetcode-logo">
+                        ●
+                    </div>
+
+                </div>
+
+
+                <p class="connect-description">
+
+                    Enter your LeetCode username.
+                    We will fetch your public LeetCode
+                    statistics.
+
+                </p>
+
+
+                <div class="username-form">
+
+                    <input
+                        type="text"
+                        id="leetcodeUsername"
+                        placeholder="Enter LeetCode username"
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="connectLeetcodeButton"
+                    >
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="leetcodeMessage"
+                    class="leetcode-message"
+                ></div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE CARD
+                 ================================================= -->
+
+            <section
+                id="leetcodeProfileCard"
+                class="leetcode-card profile-card hidden"
+            >
+
+
+                <div class="leetcode-profile-header">
+
+
+                    <div class="leetcode-profile-avatar">
+                        LC
+                    </div>
+
+
+                    <div>
+
+                        <p class="card-label">
+                            LEETCODE PROFILE
+                        </p>
+
+                        <h2
+                            id="connectedUsername"
+                        >
+                            -
+                        </h2>
+
+                        <p
+                            id="profileStatus"
+                            class="profile-status"
+                        >
+                            Connected
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STATS
+                     ================================================= -->
+
+                <div class="leetcode-stats-grid">
+
+
+                    <!-- TOTAL -->
+
+                    <div class="leetcode-stat">
+
+                        <span class="leetcode-stat-label">
+                            PROBLEMS SOLVED
+                        </span>
+
+                        <strong
+                            id="leetcodeTotalSolved"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- EASY -->
+
+                    <div class="leetcode-stat">
+
+                        <span class="leetcode-stat-label">
+                            EASY
+                        </span>
+
+                        <strong
+                            id="leetcodeEasySolved"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- MEDIUM -->
+
+                    <div class="leetcode-stat">
+
+                        <span class="leetcode-stat-label">
+                            MEDIUM
+                        </span>
+
+                        <strong
+                            id="leetcodeMediumSolved"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- HARD -->
+
+                    <div class="leetcode-stat">
+
+                        <span class="leetcode-stat-label">
+                            HARD
+                        </span>
+
+                        <strong
+                            id="leetcodeHardSolved"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- OPEN PROFILE -->
+
+                <div class="leetcode-profile-footer">
+
+                    <a
+                        id="leetcodeProfileLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open LeetCode Profile →
+                    </a>
+
+                    <button
+                        type="button"
+                        id="disconnectLeetcodeButton"
+                        class="disconnect-button"
+                    >
+                        Disconnect
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFO CARD
+                 ================================================= -->
+
+            <section class="leetcode-card information-card">
+
+                <div class="info-icon">
+                    ℹ
+                </div>
+
+                <div>
+
+                    <h3>
+                        About this integration
+                    </h3>
+
+                    <p>
+
+                        CodeSphere currently connects to your
+                        public LeetCode profile using your
+                        username. No LeetCode password is
+                        required.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/leetcode.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

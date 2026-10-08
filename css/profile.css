@@ -1,0 +1,673 @@
+/* =====================================================
+   CodeSphere - Profile Page
+   File: css/profile.css
+   ===================================================== */
+
+
+/* =====================================================
+   PROFILE PAGE LAYOUT
+   ===================================================== */
+
+.profile-page {
+    padding: 2rem;
+}
+
+
+/* =====================================================
+   PROFILE HEADER
+   ===================================================== */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    margin-bottom: 1.25rem;
+}
+
+
+.large-avatar {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-card);
+
+    border: 2px solid var(--neon-green);
+
+    color: var(--neon-green);
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+}
+
+
+.profile-header h2 {
+    margin: 0.2rem 0 0.4rem;
+
+    font-size: 1.8rem;
+
+    color: var(--text-primary);
+}
+
+
+.profile-online {
+    font-size: 0.7rem;
+
+    color: var(--neon-green);
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* =====================================================
+   PROFILE TABS
+   ===================================================== */
+
+.profile-tabs {
+    display: flex;
+
+    gap: 0.25rem;
+
+    border-bottom: 1px solid var(--border-card);
+
+    margin-bottom: 1.5rem;
+}
+
+
+.profile-tab {
+    padding: 0.8rem 1.2rem;
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    border-bottom: 2px solid transparent;
+
+    transition: all 0.2s ease;
+}
+
+
+.profile-tab:hover {
+    color: var(--text-primary);
+}
+
+
+.profile-tab.active {
+    color: var(--neon-green);
+
+    border-bottom-color: var(--neon-green);
+}
+
+
+/* =====================================================
+   SECTION HEADING
+   ===================================================== */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+
+.section-heading h3 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   PROGRESS STATS
+   ===================================================== */
+
+.progress-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+
+.progress-stat {
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    padding: 1.25rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.35rem;
+}
+
+
+.progress-number {
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+}
+
+
+.progress-label {
+    font-size: 0.65rem;
+
+    color: var(--text-dim);
+
+    letter-spacing: 0.07em;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   PROGRESS CARD
+   ===================================================== */
+
+.progress-card {
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    padding: 1.5rem;
+
+    margin-bottom: 1.25rem;
+}
+
+
+.progress-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+
+.progress-card-header h3 {
+    margin: 0.2rem 0 0;
+
+    color: var(--text-primary);
+
+    font-size: 1.05rem;
+}
+
+
+.contribution-total {
+    font-size: 0.75rem;
+
+    color: var(--text-secondary);
+}
+
+
+/* =====================================================
+   CONTRIBUTION CALENDAR
+   ===================================================== */
+
+.calendar-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 0.5rem 0 0.75rem;
+}
+
+
+/* =====================================================
+   CALENDAR HEADER
+   ===================================================== */
+
+.calendar-header {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 0.75rem;
+}
+
+
+.calendar-year {
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    color: var(--text-secondary);
+}
+
+
+/* =====================================================
+   MONTH BLOCK
+   ===================================================== */
+
+.calendar-month {
+    display: inline-flex;
+
+    vertical-align: top;
+
+    flex-direction: column;
+
+    width: 70px;
+
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   MONTH NAME
+   ===================================================== */
+
+.calendar-month-title {
+    height: 20px;
+
+    margin-bottom: 6px;
+
+    text-align: center;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    color: var(--text-dim);
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CALENDAR GRID
+   ===================================================== */
+
+.calendar-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    grid-auto-rows: 10px;
+
+    gap: 3px;
+}
+
+
+/* =====================================================
+   CALENDAR CELLS
+   ===================================================== */
+
+.calendar-cell {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 2px;
+
+    background-color: #161b22;
+
+    border: 1px solid rgba(255, 255, 255, 0.03);
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* =====================================================
+   EMPTY CELLS
+   ===================================================== */
+
+.calendar-cell.empty {
+    background-color: transparent;
+
+    border: none;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTRIBUTION LEVEL 0
+   0 PROBLEMS
+   ===================================================== */
+
+.calendar-cell.level-0 {
+    background-color: #161b22;
+}
+
+
+/* =====================================================
+   CONTRIBUTION LEVEL 1
+   1 PROBLEM
+   ===================================================== */
+
+.calendar-cell.level-1 {
+    background-color: #0e4429;
+}
+
+
+/* =====================================================
+   CONTRIBUTION LEVEL 2
+   2-3 PROBLEMS
+   ===================================================== */
+
+.calendar-cell.level-2 {
+    background-color: #006d32;
+}
+
+
+/* =====================================================
+   CONTRIBUTION LEVEL 3
+   4-5 PROBLEMS
+   ===================================================== */
+
+.calendar-cell.level-3 {
+    background-color: #26a641;
+}
+
+
+/* =====================================================
+   CONTRIBUTION LEVEL 4
+   6+ PROBLEMS
+   ===================================================== */
+
+.calendar-cell.level-4 {
+    background-color: #39d353;
+}
+
+
+/* =====================================================
+   CALENDAR HOVER
+   ===================================================== */
+
+.calendar-cell:not(.empty):hover {
+    transform: scale(1.35);
+
+    border-color:
+        rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   CALENDAR LEGEND
+   ===================================================== */
+
+.calendar-legend {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    margin-top: 0.75rem;
+
+    font-size: 0.7rem;
+
+    color: var(--text-dim);
+}
+
+
+.calendar-legend .legend-cell {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 2px;
+
+    display: inline-block;
+}
+
+
+/* =====================================================
+   LEGEND LEVEL 0
+   ===================================================== */
+
+.calendar-legend .level-0 {
+    background-color: #161b22;
+}
+
+
+/* =====================================================
+   LEGEND LEVEL 1
+   ===================================================== */
+
+.calendar-legend .level-1 {
+    background-color: #0e4429;
+}
+
+
+/* =====================================================
+   LEGEND LEVEL 2
+   ===================================================== */
+
+.calendar-legend .level-2 {
+    background-color: #006d32;
+}
+
+
+/* =====================================================
+   LEGEND LEVEL 3
+   ===================================================== */
+
+.calendar-legend .level-3 {
+    background-color: #26a641;
+}
+
+
+/* =====================================================
+   LEGEND LEVEL 4
+   ===================================================== */
+
+.calendar-legend .level-4 {
+    background-color: #39d353;
+}
+
+
+/* =====================================================
+   RECENT ACTIVITY
+   ===================================================== */
+
+.recent-activity {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+
+.activity-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0.75rem 0.9rem;
+
+    background-color:
+        rgba(255, 255, 255, 0.02);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-sm);
+}
+
+
+.activity-item > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.25rem;
+}
+
+
+.activity-item strong {
+    color: var(--text-primary);
+
+    font-size: 0.85rem;
+}
+
+
+.activity-item span {
+    color: var(--text-dim);
+
+    font-size: 0.7rem;
+}
+
+
+.activity-difficulty {
+    padding: 0.2rem 0.5rem;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 0.65rem !important;
+
+    font-weight: 600;
+
+    background-color:
+        rgba(34, 197, 94, 0.12);
+
+    color: var(--neon-green) !important;
+
+    border: 1px solid
+        rgba(34, 197, 94, 0.25);
+}
+
+
+/* =====================================================
+   EMPTY ACTIVITY
+   ===================================================== */
+
+.empty-activity {
+    padding: 1.5rem;
+
+    text-align: center;
+
+    color: var(--text-dim);
+
+    font-size: 0.8rem;
+
+    border: 1px dashed var(--border-card);
+
+    border-radius: var(--radius-sm);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .progress-stats {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .profile-page {
+        padding: 1rem;
+    }
+
+
+    .profile-header {
+        padding: 1rem;
+    }
+
+
+    .large-avatar {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 1.4rem;
+    }
+
+
+    .profile-header h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .profile-tabs {
+        overflow-x: auto;
+    }
+
+
+    .profile-tab {
+        white-space: nowrap;
+
+        padding:
+            0.7rem 0.9rem;
+    }
+
+
+    .progress-card {
+        padding: 1rem;
+    }
+
+
+    .progress-card-header {
+        align-items: flex-start;
+
+        gap: 0.75rem;
+
+        flex-direction: column;
+    }
+
+
+    .calendar-container {
+        overflow-x: auto;
+    }
+
+}

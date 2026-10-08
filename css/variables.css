@@ -1,0 +1,33 @@
+/* ==========================================
+   CodeSphere - Pitch Black HUD Theme
+   File: css/variables.css
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Pitch Black Background Palette */
+  --bg-main: #050608;
+  --bg-sidebar: #08090c;
+  --bg-card: #0d0f14;
+  --bg-input: #0a0c10;
+
+  /* Cyber Neon Accents */
+  --neon-yellow: #facc15;
+  --neon-green: #22c55e;
+  --neon-red: #ef4444;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-dim: #6b7280;
+
+  /* Tech Grid Borders */
+  --border-card: #161a24;
+  --border-bright: #2d3446;
+
+  --font-mono: 'Fira Code', monospace;
+  --sidebar-width: 250px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+}

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+
+<body>
+
+
+<div class="app-container">
+
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar" aria-label="CodeSphere navigation">
+    <!-- Shared navigation is rendered by js/sidebar.js -->
+</aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="dashboard-topbar">
+
+
+            <div>
+
+                <span class="topbar-small">
+                    CODESPHERE / DASHBOARD
+                </span>
+
+                <h2>
+                    Coding Overview
+                </h2>
+
+            </div>
+
+
+            <div class="topbar-user">
+
+
+                <div class="topbar-avatar">
+                    C
+                </div>
+
+
+                <div>
+
+                    <strong id="topbarUsername">
+                        Developer
+                    </strong>
+
+                    <span>
+                        Coder
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =========================================
+             WELCOME
+             ========================================= -->
+
+        <section class="welcome-section">
+
+
+            <div>
+
+                <p class="section-label">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    Keep building.
+                    <span>Keep solving.</span>
+                </h1>
+
+                <p class="welcome-description">
+                    Track your coding journey across different
+                    platforms from one unified dashboard.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-code">
+
+                <span>
+                    &lt;coder&gt;
+                </span>
+
+                <strong>
+                    <span>const</span> progress = "rising";
+                </strong>
+
+                <span>
+                    &lt;/coder&gt;
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             STATISTICS
+             ========================================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        TOTAL SOLVED
+                    </span>
+
+                    <span class="stat-icon">
+                        ✓
+                    </span>
+
+                </div>
+
+
+                <strong id="totalSolved">
+                    0
+                </strong>
+
+
+                <p>
+                    Problems solved
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        CURRENT STREAK
+                    </span>
+
+                    <span class="stat-icon">
+                        ⚡
+                    </span>
+
+                </div>
+
+
+                <strong id="currentStreak">
+                    0
+                </strong>
+
+
+                <p>
+                    Days active
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        PLATFORMS
+                    </span>
+
+                    <span class="stat-icon">
+                        ◈
+                    </span>
+
+                </div>
+
+
+                <strong>
+                    3
+                </strong>
+
+
+                <p>
+                    Connected platforms
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        RANK
+                    </span>
+
+                    <span class="stat-icon">
+                        # 
+                    </span>
+
+                </div>
+
+
+                <strong id="userRank">
+                    —
+                </strong>
+
+
+                <p>
+                    Among CodeSphere users
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             CODING PLATFORMS
+             ========================================= -->
+
+        <section class="dashboard-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <p class="section-label">
+                        CODING PLATFORMS
+                    </p>
+
+                    <h2>
+                        Your coding ecosystem
+                    </h2>
+
+                </div>
+
+
+                <span class="section-status">
+                    3 PLATFORMS
+                </span>
+
+
+            </div>
+
+
+
+            <div class="platform-grid">
+
+
+                <!-- LEETCODE -->
+
+                <a
+                    href="leetcode.html"
+                    class="platform-card leetcode-card"
+                >
+
+                    <div class="platform-header">
+
+                        <div class="platform-logo leetcode-logo">
+                            LC
+                        </div>
+
+                        <span class="platform-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        LeetCode
+                    </h3>
+
+
+                    <p>
+                        Practice interview-focused coding
+                        problems and keep track of your
+                        problem-solving progress.
+                    </p>
+
+
+                    <div class="platform-footer">
+
+                        <span>
+                            VIEW PROGRESS
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- CODEFORCES -->
+
+                <a
+                    href="codeforces.html"
+                    class="platform-card codeforces-card"
+                >
+
+                    <div class="platform-header">
+
+                        <div class="platform-logo codeforces-logo">
+                            CF
+                        </div>
+
+                        <span class="platform-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Codeforces
+                    </h3>
+
+
+                    <p>
+                        Monitor your competitive programming
+                        activity, rating and performance
+                        from Codeforces.
+                    </p>
+
+
+                    <div class="platform-footer">
+
+                        <span>
+                            VIEW PROGRESS
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- GFG -->
+
+                <a
+                    href="gfg.html"
+                    class="platform-card gfg-card"
+                >
+
+                    <div class="platform-header">
+
+                        <div class="platform-logo gfg-logo">
+                            GFG
+                        </div>
+
+                        <span class="platform-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        GeeksforGeeks
+                    </h3>
+
+
+                    <p>
+                        Connect your GFG profile and track
+                        your solved problems and coding
+                        activity in CodeSphere.
+                    </p>
+
+
+                    <div class="platform-footer">
+
+                        <span>
+                            VIEW PROGRESS
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROGRESS + ACTIVITY
+             ========================================= -->
+
+        <section class="dashboard-lower">
+
+
+            <!-- PROGRESS -->
+
+            <div class="dashboard-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            PROGRESS
+                        </p>
+
+                        <h3>
+                            Problem solving progress
+                        </h3>
+
+                    </div>
+
+
+                    <span class="panel-icon">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <div class="progress-content">
+
+
+                    <div class="progress-circle">
+
+                        <div>
+
+                            <strong id="progressPercent">
+                                0%
+                            </strong>
+
+                            <span>
+                                COMPLETE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-details">
+
+
+                        <div class="progress-row">
+
+                            <span>
+                                Easy
+                            </span>
+
+                            <strong id="easySolved">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-row">
+
+                            <span>
+                                Medium
+                            </span>
+
+                            <strong id="mediumSolved">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-row">
+
+                            <span>
+                                Hard
+                            </span>
+
+                            <strong id="hardSolved">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <div class="dashboard-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            ACTIVITY
+                        </p>
+
+                        <h3>
+                            Recent activity
+                        </h3>
+
+                    </div>
+
+
+                    <span class="live-indicator">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-dot">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Start solving problems
+                            </strong>
+
+                            <span>
+                                Your activity will appear here.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-dot">
+                            +
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Connect a coding platform
+                            </strong>
+
+                            <span>
+                                Link LeetCode, Codeforces or GFG.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-dot">
+                            ↑
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Build your coding streak
+                            </strong>
+
+                            <span>
+                                Solve consistently to improve.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <span>
+                CodeSphere
+            </span>
+
+            <span>
+                YOUR CODING JOURNEY, UNIFIED.
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ===============================
+           CURRENT USER
+           =============================== */
+
+        let currentUser = null;
+
+
+        try {
+
+            currentUser =
+                JSON.parse(
+                    localStorage.getItem(
+                        "codesphereCurrentUser"
+                    )
+                );
+
+        } catch (error) {
+
+            currentUser = null;
+
+        }
+
+
+
+        /* ===============================
+           PROTECT DASHBOARD
+           =============================== */
+
+        if (!currentUser) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+
+        /* ===============================
+           DISPLAY USERNAME
+           =============================== */
+
+        const username =
+            currentUser.username ||
+            "Developer";
+
+
+        document.getElementById(
+            "sidebarUsername"
+        ).textContent = username;
+
+
+        document.getElementById(
+            "topbarUsername"
+        ).textContent = username;
+
+
+
+        /* ===============================
+           GET USERS
+           =============================== */
+
+        let users = [];
+
+
+        try {
+
+            users =
+                JSON.parse(
+                    localStorage.getItem(
+                        "codesphereUsers"
+                    )
+                ) || [];
+
+        } catch (error) {
+
+            users = [];
+
+        }
+
+
+
+        /* ===============================
+           FIND CURRENT USER
+           =============================== */
+
+        const user =
+            users.find(
+                item =>
+                    item.username === username
+            );
+
+
+
+        /* ===============================
+           BASIC STATISTICS
+           =============================== */
+
+        if (user) {
+
+            const solved =
+                Number(
+                    user.solvedCount || 0
+                );
+
+
+            document.getElementById(
+                "totalSolved"
+            ).textContent = solved;
+
+
+            document.getElementById(
+                "currentStreak"
+            ).textContent =
+                Number(
+                    user.streak || 0
+                );
+
+
+
+            /* ==========================
+               PROGRESS
+               ========================== */
+
+            const progress =
+                Math.min(
+                    100,
+                    Math.round(
+                        (solved / 100) * 100
+                    )
+                );
+
+
+            document.getElementById(
+                "progressPercent"
+            ).textContent =
+                progress + "%";
+
+
+            document.getElementById(
+                "easySolved"
+            ).textContent =
+                Number(
+                    user.easySolved || 0
+                );
+
+
+            document.getElementById(
+                "mediumSolved"
+            ).textContent =
+                Number(
+                    user.mediumSolved || 0
+                );
+
+
+            document.getElementById(
+                "hardSolved"
+            ).textContent =
+                Number(
+                    user.hardSolved || 0
+                );
+
+        }
+
+
+
+        /* ===============================
+           USER RANK
+           =============================== */
+
+        if (users.length > 0) {
+
+            const sortedUsers =
+                [...users].sort(
+                    (a, b) =>
+                        Number(
+                            b.solvedCount || 0
+                        ) -
+                        Number(
+                            a.solvedCount || 0
+                        )
+                );
+
+
+            const rank =
+                sortedUsers.findIndex(
+                    item =>
+                        item.username === username
+                ) + 1;
+
+
+            if (rank > 0) {
+
+                document.getElementById(
+                    "userRank"
+                ).textContent =
+                    "#" + rank;
+
+            }
+
+        }
+
+
+
+        /* ===============================
+           LOGOUT
+           =============================== */
+
+        const logoutButton =
+            document.getElementById(
+                "logoutButton"
+            );
+
+
+        logoutButton.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "codesphereCurrentUser"
+                );
+
+
+                window.location.href =
+                    "login.html";
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

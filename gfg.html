@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeSphere | GeeksforGeeks</title>
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/gfg.css"
+    >
+
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+
+<body>
+
+<div class="gfg-app">
+
+
+    <!-- =========================
+         SIDEBAR
+         ========================= -->
+
+    <aside class="sidebar" aria-label="CodeSphere navigation">
+    <!-- Shared navigation is rendered by js/sidebar.js -->
+</aside>
+
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main class="gfg-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-title">
+
+                <span class="topbar-label">
+                    CODESPHERE
+                </span>
+
+                <span class="topbar-divider">
+                    /
+                </span>
+
+                <span>
+                    GeeksforGeeks
+                </span>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <a
+                    href="profile.html"
+                    class="topbar-profile"
+                >
+
+                    <div class="profile-avatar">
+                        C
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span
+                            id="gfgDashboardUsername"
+                            class="profile-name"
+                        >
+                            Developer
+                        </span>
+
+                        <span class="profile-role">
+                            Coder
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             CONTENT
+             ========================= -->
+
+        <section class="gfg-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="gfg-page-header">
+
+                <p class="gfg-label">
+                    EXTERNAL PLATFORM
+                </p>
+
+                <h1>
+                    GeeksforGeeks Progress
+                </h1>
+
+                <p>
+                    Connect your public GeeksforGeeks
+                    profile with CodeSphere.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CONNECT CARD
+                 ========================= -->
+
+            <section class="gfg-card">
+
+
+                <div class="gfg-card-header">
+
+                    <div>
+
+                        <p class="card-label">
+                            CONNECT ACCOUNT
+                        </p>
+
+                        <h2>
+                            Connect your GFG profile
+                        </h2>
+
+                    </div>
+
+
+                    <div class="gfg-logo">
+                        GFG
+                    </div>
+
+                </div>
+
+
+                <p class="connect-description">
+
+                    Enter your GeeksforGeeks username.
+                    We will connect your public profile
+                    to CodeSphere.
+
+                </p>
+
+
+                <div class="gfg-form">
+
+                    <input
+                        type="text"
+                        id="gfgUsername"
+                        placeholder="Enter GFG username"
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="connectGfgButton"
+                    >
+                        Connect
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="gfgMessage"
+                    class="gfg-message"
+                ></div>
+
+
+            </section>
+
+
+
+            <!-- =========================
+                 PROFILE CARD
+                 ========================= -->
+
+            <section
+                id="gfgProfileCard"
+                class="gfg-card gfg-profile-card hidden"
+            >
+
+
+                <div class="gfg-profile-header">
+
+
+                    <div class="gfg-profile-avatar">
+                        G
+                    </div>
+
+
+                    <div>
+
+                        <p class="card-label">
+                            GEEKSFORGEEKS PROFILE
+                        </p>
+
+                        <h2 id="connectedGfgUsername">
+                            -
+                        </h2>
+
+                        <p class="gfg-connected">
+                            ● Connected
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PROFILE INFORMATION -->
+
+                <div class="gfg-info-box">
+
+                    <div>
+
+                        <span class="info-label">
+                            PLATFORM
+                        </span>
+
+                        <strong>
+                            GeeksforGeeks
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="info-label">
+                            USERNAME
+                        </span>
+
+                        <strong
+                            id="gfgProfileUsername"
+                        >
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOTER -->
+
+                <div class="gfg-profile-footer">
+
+
+                    <a
+                        id="gfgProfileLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GFG Profile →
+                    </a>
+
+
+                    <button
+                        type="button"
+                        id="disconnectGfgButton"
+                        class="disconnect-button"
+                    >
+                        Disconnect
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="gfg-card gfg-stats-card">
+                <div class="gfg-card-header">
+                    <div>
+                        <span class="gfg-label">LIVE DATA</span>
+                        <h2>GFG Statistics</h2>
+                    </div>
+                </div>
+                <div class="gfg-stats-grid">
+                    <div class="gfg-stat"><span>Total Solved</span><strong id="gfgTotalSolved">—</strong></div>
+                    <div class="gfg-stat"><span>Easy</span><strong id="gfgEasy">—</strong></div>
+                    <div class="gfg-stat"><span>Medium</span><strong id="gfgMedium">—</strong></div>
+                    <div class="gfg-stat"><span>Hard</span><strong id="gfgHard">—</strong></div>
+                    <div class="gfg-stat"><span>Acceptance</span><strong id="gfgAcceptance">—</strong></div>
+                    <div class="gfg-stat"><span>Total Questions</span><strong id="gfgTotalQuestions">—</strong></div>
+                </div>
+                <div class="gfg-topic-section">
+                    <h3>Top Topics</h3>
+                    <div id="gfgTopTopics" class="gfg-topic-list">No topic data yet.</div>
+                </div>
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<script src="js/gfg.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>

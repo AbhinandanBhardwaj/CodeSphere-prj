@@ -1,0 +1,1374 @@
+/* ==========================================
+   CodeSphere - Dashboard Styles
+   File: css/style.css
+   ========================================== */
+
+
+/* ==========================================
+   1. RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-mono);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+
+/* ==========================================
+   2. MAIN APP
+   ========================================== */
+
+.app-container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+}
+
+
+
+/* ==========================================
+   3. SIDEBAR
+   ========================================== */
+
+.sidebar {
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-card);
+
+    padding: 1.5rem 1.1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+
+    overflow-y: auto;
+}
+
+
+.brand-header {
+    padding: 0.4rem 0.5rem 1.5rem;
+
+    border-bottom: 1px solid var(--border-card);
+}
+
+
+.brand-symbol {
+    color: var(--neon-yellow);
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    margin-bottom: 0.3rem;
+
+    text-shadow:
+        0 0 12px rgba(228, 247, 56, 0.5);
+}
+
+
+.brand-header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+    letter-spacing: 1px;
+}
+
+
+.brand-header span {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: var(--text-dim);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+
+/* ==========================================
+   4. NAVIGATION
+   ========================================== */
+
+.nav-menu {
+    list-style: none;
+
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+}
+
+
+.nav-section {
+    list-style: none;
+
+    margin-top: 1.15rem;
+    margin-bottom: 0.35rem;
+
+    padding-left: 0.8rem;
+
+    color: var(--text-dim);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+
+    font-weight: 700;
+}
+
+
+.nav-link {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.72rem 0.8rem;
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+
+    border-radius: var(--radius-sm);
+
+    border-left: 3px solid transparent;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-link:hover {
+    background: rgba(228, 247, 56, 0.06);
+
+    color: var(--text-primary);
+
+    transform: translateX(2px);
+}
+
+
+.nav-link.active {
+    background: rgba(228, 247, 56, 0.1);
+
+    color: var(--neon-yellow);
+
+    border-left-color: var(--neon-yellow);
+
+    box-shadow:
+        inset 10px 0 25px rgba(228, 247, 56, 0.03);
+}
+
+
+.nav-icon {
+    width: 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: inherit;
+
+    font-size: 0.9rem;
+}
+
+
+.leetcode-dot {
+    color: #ffa116;
+}
+
+
+.cf-icon {
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    color: #5b8cff;
+}
+
+
+.gfg-icon {
+    color: #20c997;
+
+    font-weight: 800;
+}
+
+
+
+/* ==========================================
+   5. SIDEBAR BOTTOM
+   ========================================== */
+
+.sidebar-bottom {
+    border-top: 1px solid var(--border-card);
+
+    padding-top: 1rem;
+}
+
+
+.btn-session {
+    width: 100%;
+
+    border: 0;
+
+    background: var(--neon-yellow);
+
+    color: #000;
+
+    padding: 0.72rem;
+
+    margin: 0.5rem 0 1rem;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-session:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(228, 247, 56, 0.2);
+}
+
+
+.user-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    padding: 0.4rem 0.3rem;
+}
+
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid var(--neon-yellow);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--neon-yellow);
+
+    background: rgba(228, 247, 56, 0.06);
+
+    font-weight: 800;
+
+    border-radius: 50%;
+}
+
+
+.user-badge strong {
+    display: block;
+
+    font-size: 0.75rem;
+
+    color: var(--text-primary);
+
+    max-width: 130px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.user-status {
+    display: block;
+
+    margin-top: 0.1rem;
+
+    font-size: 0.58rem;
+
+    color: var(--neon-green);
+}
+
+
+
+/* ==========================================
+   6. MAIN CONTENT
+   ========================================== */
+
+.main-content {
+    padding: 1.5rem 2.2rem 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    min-width: 0;
+}
+
+
+
+/* ==========================================
+   7. TOPBAR
+   ========================================== */
+
+.dashboard-topbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 1.1rem;
+
+    border-bottom: 1px solid var(--border-card);
+}
+
+
+.topbar-small {
+    display: block;
+
+    color: var(--text-dim);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.1em;
+
+    margin-bottom: 0.25rem;
+}
+
+
+.dashboard-topbar h2 {
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+
+.topbar-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+}
+
+
+.topbar-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(228, 247, 56, 0.08);
+
+    border: 1px solid var(--border-bright);
+
+    color: var(--neon-yellow);
+
+    font-weight: 800;
+}
+
+
+.topbar-user strong {
+    display: block;
+
+    font-size: 0.75rem;
+}
+
+
+.topbar-user span {
+    display: block;
+
+    color: var(--text-dim);
+
+    font-size: 0.6rem;
+}
+
+
+
+/* ==========================================
+   8. WELCOME SECTION
+   ========================================== */
+
+.welcome-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1.8rem;
+
+    border: 1px solid var(--border-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(228, 247, 56, 0.05),
+            transparent 50%
+        ),
+        var(--bg-card);
+
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.welcome-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    top: -70px;
+
+    border: 1px solid rgba(228, 247, 56, 0.12);
+
+    border-radius: 50%;
+}
+
+
+.section-label {
+    color: var(--neon-yellow);
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.13em;
+
+    font-weight: 700;
+
+    margin-bottom: 0.35rem;
+}
+
+
+.welcome-section h1 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 0.7rem;
+}
+
+
+.welcome-section h1 span {
+    color: var(--neon-yellow);
+}
+
+
+.welcome-description {
+    color: var(--text-secondary);
+
+    max-width: 600px;
+
+    font-size: 0.78rem;
+}
+
+
+.welcome-code {
+    min-width: 240px;
+
+    padding: 1rem;
+
+    border-left: 1px solid var(--border-card);
+
+    color: var(--text-dim);
+
+    font-size: 0.7rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.3rem;
+}
+
+
+.welcome-code strong {
+    color: var(--text-primary);
+
+    font-weight: 500;
+}
+
+
+.welcome-code strong span {
+    color: var(--neon-yellow);
+}
+
+
+
+/* ==========================================
+   9. STATISTICS
+   ========================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 1rem;
+}
+
+
+.stat-card {
+    padding: 1.1rem;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--border-bright);
+}
+
+
+.stat-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: var(--text-dim);
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+.stat-icon {
+    color: var(--neon-yellow);
+
+    font-size: 0.85rem;
+}
+
+
+.stat-card > strong {
+    display: block;
+
+    margin-top: 0.55rem;
+
+    font-size: 1.7rem;
+
+    color: var(--text-primary);
+}
+
+
+.stat-card p {
+    margin-top: 0.1rem;
+
+    color: var(--text-dim);
+
+    font-size: 0.62rem;
+}
+
+
+
+/* ==========================================
+   10. SECTION HEADING
+   ========================================== */
+
+.dashboard-section {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+}
+
+
+.section-heading h2 {
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+
+.section-status {
+    color: var(--text-dim);
+
+    font-size: 0.58rem;
+
+    border: 1px solid var(--border-card);
+
+    padding: 0.35rem 0.55rem;
+
+    border-radius: var(--radius-sm);
+}
+
+
+
+/* ==========================================
+   11. PLATFORM CARDS
+   ========================================== */
+
+.platform-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1rem;
+}
+
+
+.platform-card {
+    min-height: 245px;
+
+    padding: 1.25rem;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    text-decoration: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.platform-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--neon-yellow);
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.platform-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--border-bright);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.platform-card:hover::before {
+    opacity: 1;
+}
+
+
+.platform-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.platform-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-sm);
+
+    font-weight: 900;
+
+    font-size: 0.75rem;
+}
+
+
+.leetcode-logo {
+    background: rgba(255, 161, 22, 0.1);
+
+    border: 1px solid rgba(255, 161, 22, 0.35);
+
+    color: #ffa116;
+}
+
+
+.codeforces-logo {
+    background: rgba(91, 140, 255, 0.1);
+
+    border: 1px solid rgba(91, 140, 255, 0.35);
+
+    color: #6f9bff;
+}
+
+
+.gfg-logo {
+    background: rgba(32, 201, 151, 0.1);
+
+    border: 1px solid rgba(32, 201, 151, 0.35);
+
+    color: #20c997;
+}
+
+
+.platform-arrow {
+    color: var(--text-dim);
+
+    font-size: 1.1rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.platform-card:hover .platform-arrow {
+    color: var(--neon-yellow);
+
+    transform: translateX(4px);
+}
+
+
+.platform-card h3 {
+    margin-top: 1.25rem;
+
+    font-size: 1rem;
+}
+
+
+.platform-card p {
+    margin-top: 0.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+
+    line-height: 1.7;
+}
+
+
+.platform-footer {
+    margin-top: auto;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--border-card);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--text-dim);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+.platform-card:hover .platform-footer {
+    color: var(--neon-yellow);
+}
+
+
+
+/* ==========================================
+   12. LOWER DASHBOARD
+   ========================================== */
+
+.dashboard-lower {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 1rem;
+}
+
+
+.dashboard-panel {
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: var(--radius-md);
+
+    padding: 1.25rem;
+}
+
+
+.panel-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding-bottom: 1rem;
+
+    border-bottom: 1px solid var(--border-card);
+}
+
+
+.panel-header h3 {
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+
+.panel-icon {
+    color: var(--neon-yellow);
+
+    font-size: 1rem;
+}
+
+
+.live-indicator {
+    color: var(--neon-green);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+
+/* ==========================================
+   13. PROGRESS
+   ========================================== */
+
+.progress-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    padding-top: 1.2rem;
+}
+
+
+.progress-circle {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--bg-card) 58%,
+            transparent 59%
+        );
+
+    border: 2px solid var(--neon-yellow);
+
+    box-shadow:
+        0 0 25px rgba(228, 247, 56, 0.08);
+
+    flex-shrink: 0;
+}
+
+
+.progress-circle div {
+    text-align: center;
+}
+
+
+.progress-circle strong {
+    display: block;
+
+    color: var(--neon-yellow);
+
+    font-size: 1.5rem;
+}
+
+
+.progress-circle span {
+    color: var(--text-dim);
+
+    font-size: 0.5rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+.progress-details {
+    width: 100%;
+}
+
+
+.progress-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 0.55rem 0;
+
+    border-bottom: 1px solid var(--border-card);
+
+    font-size: 0.68rem;
+}
+
+
+.progress-row span {
+    color: var(--text-secondary);
+}
+
+
+.progress-row strong {
+    color: var(--text-primary);
+}
+
+
+
+/* ==========================================
+   14. ACTIVITY
+   ========================================== */
+
+.activity-list {
+    padding-top: 0.5rem;
+}
+
+
+.activity-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.8rem 0;
+
+    border-bottom: 1px solid var(--border-card);
+}
+
+
+.activity-item:last-child {
+    border-bottom: 0;
+}
+
+
+.activity-dot {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(228, 247, 56, 0.07);
+
+    color: var(--neon-yellow);
+
+    font-size: 0.7rem;
+}
+
+
+.activity-item strong {
+    display: block;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+}
+
+
+.activity-item span {
+    display: block;
+
+    margin-top: 0.15rem;
+
+    color: var(--text-dim);
+
+    font-size: 0.58rem;
+}
+
+
+
+/* ==========================================
+   15. FOOTER
+   ========================================== */
+
+.dashboard-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 0.7rem;
+
+    border-top: 1px solid var(--border-card);
+
+    color: var(--text-dim);
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+
+/* ==========================================
+   16. RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .platform-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sidebar {
+        position: relative;
+
+        height: auto;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border-card);
+    }
+
+
+    .nav-menu {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .nav-section {
+        grid-column: 1 / -1;
+    }
+
+
+    .main-content {
+        padding: 1.2rem;
+    }
+
+
+    .welcome-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.5rem;
+    }
+
+
+    .welcome-code {
+        width: 100%;
+
+        border-left: 0;
+
+        border-top: 1px solid var(--border-card);
+
+        padding-top: 1rem;
+    }
+
+
+    .dashboard-lower {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard-topbar {
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+
+    .topbar-user {
+        display: none;
+    }
+
+
+    .nav-menu {
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav-section {
+        grid-column: auto;
+    }
+
+
+    .progress-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .dashboard-footer {
+        flex-direction: column;
+
+        gap: 0.4rem;
+    }
+
+}
+
+/* =====================================================
+   SHARED COLLAPSIBLE SIDEBAR NAVIGATION
+   ===================================================== */
+.cs-nav-section-title {
+    margin: 28px 0 10px;
+    padding: 0 14px;
+    color: var(--text-muted, #71809b);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.cs-nav-link,
+.cs-nav-group-toggle,
+.cs-nav-sub-link {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    background: transparent;
+    color: var(--text-secondary, #a8b2c7);
+    text-decoration: none;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 14px;
+    margin: 3px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.cs-nav-link:hover,
+.cs-nav-group-toggle:hover,
+.cs-nav-sub-link:hover {
+    background: rgba(255, 255, 255, .045);
+    color: #fff;
+}
+
+.cs-nav-link.active,
+.cs-nav-sub-link.active {
+    color: #ffd21a;
+    background: rgba(255, 210, 26, .09);
+    box-shadow: inset 3px 0 0 #ffd21a;
+}
+
+.cs-nav-icon {
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cs-nav-group {
+    margin-top: 4px;
+}
+
+.cs-nav-group-toggle {
+    justify-content: flex-start;
+}
+
+.cs-nav-group-label {
+    flex: 1;
+    text-transform: none;
+}
+
+.cs-chevron {
+    font-size: 16px;
+    transition: transform .18s ease;
+}
+
+.cs-nav-group.open .cs-chevron {
+    transform: rotate(180deg);
+}
+
+.cs-nav-submenu {
+    display: none;
+    padding: 2px 0 4px 18px;
+}
+
+.cs-nav-group.open .cs-nav-submenu {
+    display: block;
+}
+
+.cs-nav-sub-link {
+    min-height: 42px;
+    margin: 2px 0;
+    padding-left: 12px;
+    font-size: .93em;
+}
+
+.cs-platform-badge {
+    width: 20px;
+    min-width: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.cs-platform-badge.cf { color: #5f8cff; }
+.cs-platform-badge.gfg { color: #20c997; }
+
+.cs-external {
+    margin-left: auto;
+    color: #647089;
+    font-size: 13px;
+}
+
+/* Keep the new navigation usable on narrow screens. */
+@media (max-width: 900px) {
+    .cs-nav-submenu {
+        padding-left: 8px;
+    }
+}

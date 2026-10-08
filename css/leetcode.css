@@ -1,0 +1,1052 @@
+/* =====================================================
+   CodeSphere
+   LeetCode Page
+   ===================================================== */
+
+
+/* =====================================================
+   APP
+   ===================================================== */
+
+.leetcode-app {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background: var(--bg-main);
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.leetcode-app .sidebar {
+
+    width: 240px;
+
+    min-height: 100vh;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--bg-card);
+
+    border-right: 1px solid var(--border-card);
+
+    z-index: 100;
+
+}
+
+
+.leetcode-app .sidebar-brand {
+
+    height: 76px;
+
+    padding: 0 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid var(--border-card);
+
+}
+
+
+.leetcode-app .brand-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--neon-green);
+
+    color: #07110b;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.leetcode-app .brand-name {
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+}
+
+
+.leetcode-app .brand-subtitle {
+
+    margin-top: 2px;
+
+    font-size: 0.65rem;
+
+    color: var(--text-dim);
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.leetcode-app .sidebar-nav {
+
+    padding: 24px 12px;
+
+    flex: 1;
+
+}
+
+
+.leetcode-app .nav-section-title {
+
+    padding: 0 12px;
+
+    margin: 0 0 8px;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: var(--text-dim);
+
+}
+
+
+.leetcode-app .profile-section-title {
+
+    margin-top: 28px;
+
+}
+
+
+.leetcode-app .nav-item {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    margin-bottom: 4px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+
+    font-size: 0.85rem;
+
+    transition: 0.2s ease;
+
+}
+
+
+.leetcode-app .nav-item:hover {
+
+    color: var(--text-primary);
+
+    background: rgba(255, 255, 255, 0.04);
+
+}
+
+
+.leetcode-app .nav-item.active {
+
+    color: var(--neon-green);
+
+    background: rgba(34, 197, 94, 0.10);
+
+}
+
+
+.leetcode-app .nav-icon {
+
+    width: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.95rem;
+
+}
+
+
+.leetcode-nav-icon {
+
+    color: #ffa116;
+
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+   ===================================================== */
+
+.leetcode-app .sidebar-bottom {
+
+    padding: 12px;
+
+    border-top: 1px solid var(--border-card);
+
+}
+
+
+.leetcode-app .logout-button {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+}
+
+
+.leetcode-app .logout-button:hover {
+
+    color: var(--neon-red);
+
+    background: rgba(239, 68, 68, 0.08);
+
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+.leetcode-main {
+
+    width: calc(100% - 240px);
+
+    margin-left: 240px;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   TOPBAR
+   ===================================================== */
+
+.leetcode-app .topbar {
+
+    height: 76px;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--bg-main);
+
+    border-bottom: 1px solid var(--border-card);
+
+}
+
+
+.leetcode-app .topbar-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 0.85rem;
+
+    color: var(--text-secondary);
+
+}
+
+
+.leetcode-app .topbar-label {
+
+    color: var(--text-dim);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.leetcode-app .topbar-divider {
+
+    color: var(--text-dim);
+
+}
+
+
+.leetcode-app .topbar-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: inherit;
+
+}
+
+
+.leetcode-app .profile-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--neon-green);
+
+    color: #07110b;
+
+    font-weight: 700;
+
+}
+
+
+.leetcode-app .profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.leetcode-app .profile-name {
+
+    color: var(--text-primary);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+}
+
+
+.leetcode-app .profile-role {
+
+    color: var(--text-dim);
+
+    font-size: 0.65rem;
+
+}
+
+
+.leetcode-app .profile-arrow {
+
+    color: var(--text-dim);
+
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.leetcode-content {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 42px 36px 60px;
+
+}
+
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.leetcode-page-header {
+
+    margin-bottom: 28px;
+
+}
+
+
+.leetcode-label {
+
+    margin: 0 0 8px;
+
+    color: #ffa116;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.leetcode-page-header h1 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+}
+
+
+.leetcode-page-header p:last-child {
+
+    margin-top: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.leetcode-card {
+
+    margin-bottom: 22px;
+
+    padding: 28px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-card);
+
+    border-radius: 12px;
+
+}
+
+
+.leetcode-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.card-label {
+
+    margin: 0 0 7px;
+
+    color: var(--text-dim);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.leetcode-card h2 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 1.2rem;
+
+}
+
+
+.leetcode-logo {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 161, 22, 0.12);
+
+    color: #ffa116;
+
+    font-size: 24px;
+
+}
+
+
+/* =====================================================
+   CONNECT FORM
+   ===================================================== */
+
+.connect-description {
+
+    margin: 18px 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+
+}
+
+
+.username-form {
+
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 650px;
+
+}
+
+
+.username-form input {
+
+    flex: 1;
+
+    min-height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border-card);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: var(--bg-main);
+
+    color: var(--text-primary);
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+}
+
+
+.username-form input:focus {
+
+    border-color: #ffa116;
+
+}
+
+
+.username-form button {
+
+    min-width: 110px;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: #ffa116;
+
+    color: #111;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.username-form button:hover {
+
+    transform: translateY(-1px);
+
+    opacity: 0.9;
+
+}
+
+
+.username-form button:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+   ===================================================== */
+
+.leetcode-message {
+
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    font-size: 0.8rem;
+
+}
+
+
+.leetcode-message.success {
+
+    color: var(--neon-green);
+
+}
+
+
+.leetcode-message.error {
+
+    color: var(--neon-red);
+
+}
+
+
+.leetcode-message.loading {
+
+    color: var(--text-secondary);
+
+}
+
+
+/* =====================================================
+   PROFILE
+   ===================================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+.leetcode-profile-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.leetcode-profile-avatar {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 161, 22, 0.12);
+
+    color: #ffa116;
+
+    font-weight: 800;
+
+}
+
+
+.profile-status {
+
+    margin: 6px 0 0;
+
+    color: var(--neon-green);
+
+    font-size: 0.75rem;
+
+}
+
+
+/* =====================================================
+   STATS GRID
+   ===================================================== */
+
+.leetcode-stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.leetcode-stat {
+
+    padding: 20px;
+
+    border: 1px solid var(--border-card);
+
+    border-radius: 10px;
+
+    background: var(--bg-main);
+
+}
+
+
+.leetcode-stat-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--text-dim);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+
+}
+
+
+.leetcode-stat strong {
+
+    color: var(--text-primary);
+
+    font-size: 1.7rem;
+
+}
+
+
+/* =====================================================
+   PROFILE FOOTER
+   ===================================================== */
+
+.leetcode-profile-footer {
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-top: 1px solid var(--border-card);
+
+}
+
+
+.leetcode-profile-footer a {
+
+    color: #ffa116;
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+}
+
+
+.leetcode-profile-footer a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.disconnect-button {
+
+    padding: 8px 14px;
+
+    border: 1px solid var(--border-card);
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+
+.disconnect-button:hover {
+
+    color: var(--neon-red);
+
+    border-color: var(--neon-red);
+
+}
+
+
+/* =====================================================
+   INFORMATION
+   ===================================================== */
+
+.information-card {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+}
+
+
+.info-icon {
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(255, 161, 22, 0.10);
+
+    color: #ffa116;
+
+}
+
+
+.information-card h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--text-primary);
+
+    font-size: 0.9rem;
+
+}
+
+
+.information-card p {
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.8rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .leetcode-app .sidebar {
+
+        width: 210px;
+
+    }
+
+
+    .leetcode-main {
+
+        width: calc(100% - 210px);
+
+        margin-left: 210px;
+
+    }
+
+
+    .leetcode-stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .leetcode-app .sidebar {
+
+        display: none;
+
+    }
+
+
+    .leetcode-main {
+
+        width: 100%;
+
+        margin-left: 0;
+
+    }
+
+
+    .leetcode-content {
+
+        padding: 28px 18px 40px;
+
+    }
+
+
+    .username-form {
+
+        flex-direction: column;
+
+    }
+
+
+    .username-form button {
+
+        width: 100%;
+
+    }
+
+
+    .leetcode-stats-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .leetcode-stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .leetcode-profile-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
